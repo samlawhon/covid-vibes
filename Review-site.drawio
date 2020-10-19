@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-10-19T18:10:43.298Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36" etag="3bGDruYn2lpQzs5m-isb" version="13.7.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-19T19:21:26.450Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36" etag="8TgZSFYhmG7Q6xmb02zj" version="13.7.9" type="github">
   <diagram id="hovLEJ-dNR2mSK_s2hqZ" name="Page-1">
-    <mxGraphModel dx="778" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1060" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -16,11 +16,11 @@
             <mxPoint x="330" y="228" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="yNtRE2YVVB5kZNCRv-Dg-4" value="&lt;u&gt;attributes&lt;br&gt;&lt;/u&gt;name&lt;br&gt;address&lt;br&gt;&amp;nbsp;maybe some other basic info TBD&lt;br&gt;has_many reviews" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="360" width="200" height="80" as="geometry" />
+        <mxCell id="yNtRE2YVVB5kZNCRv-Dg-4" value="&lt;u&gt;attributes&lt;br&gt;&lt;/u&gt;name&lt;br&gt;address&lt;br&gt;description&lt;br&gt;image (optional)&lt;br&gt;&lt;br&gt;&amp;nbsp;maybe some other basic info TBD&lt;br&gt;has_many reviews" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="200" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="yNtRE2YVVB5kZNCRv-Dg-5" value="&lt;u&gt;attributes&lt;br&gt;&lt;/u&gt;social distancing:boolean&lt;br&gt;masks: boolean&lt;br&gt;outdoor seating: boolean&lt;br&gt;party size &amp;lt; 10: boolean&lt;br&gt;belongs_to user&lt;br&gt;raitng: integer&lt;br&gt;belongs_to restaurants" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="360" y="340" width="150" height="120" as="geometry" />
+        <mxCell id="yNtRE2YVVB5kZNCRv-Dg-5" value="&lt;u&gt;attributes&lt;br&gt;&lt;/u&gt;social distancing:boolean&lt;br&gt;masks: boolean&lt;br&gt;outdoor seating: boolean&lt;br&gt;party size &amp;lt; 10: boolean&lt;br&gt;belongs_to user&lt;br&gt;rating: integer&lt;br&gt;form review (react)&lt;br&gt;belongs_to restaurants" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="335" width="150" height="130" as="geometry" />
         </mxCell>
         <mxCell id="yNtRE2YVVB5kZNCRv-Dg-6" value="seed file with scipt to populate restaurant attributes?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
           <mxGeometry x="580" y="660" width="290" height="20" as="geometry" />
