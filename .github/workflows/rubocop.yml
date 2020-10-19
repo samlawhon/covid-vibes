@@ -1,10 +1,15 @@
-name: Ruby linting
+name: Rubocop
+
 on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: RuboCop Linter Action
-      uses: andrewmcodes/rubocop-linter-action@v3.3.0
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v1
+      - name: RuboCop Linter
+        uses: andrewmcodes/rubocop-linter-action@v3.3.0
+        with:
+          action_config_path: ".rubocop.yml"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
