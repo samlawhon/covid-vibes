@@ -14,7 +14,6 @@
     "@babel/runtime": "^7.6.2",
     "@rails/webpacker": "3.5",
     "babel-loader": "^8.0.6",
-    "eslint": "^7.11.0",
     "prop-types": "~15.6.0",
     "react": "~16.8.0",
     "react-dom": "~16.8.0",
@@ -25,6 +24,8 @@
     "babel-jest": "^24.9.0",
     "enzyme": "~3.10.0",
     "enzyme-adapter-react-16": "~1.14.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-react": "^7.21.4",
     "fetch-mock": "~5.13.1",
     "jest": "^24.9.0",
     "webpack-cli": "^2.0.10",
@@ -34,7 +35,7 @@
     "start": "./bin/webpack-dev-server",
     "test": "node_modules/.bin/jest",
     "test:dev": "node_modules/.bin/jest --notify --watch",
-    "eslint/github-action@v0": "eslint src --ext .js,.jsx,.ts,.tsx"
+    "eslint/github-action@v0": "eslint ./app/javascript/react --ext .js,.jsx,.ts,.tsx"
   },
   "jest": {
     "automock": false,
