@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-10-19T18:09:32.446Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36" etag="fvVBemAY41iHpltN7Ral" version="13.7.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-10-19T18:10:43.298Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36" etag="3bGDruYn2lpQzs5m-isb" version="13.7.9" type="github">
   <diagram id="hovLEJ-dNR2mSK_s2hqZ" name="Page-1">
     <mxGraphModel dx="778" dy="526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -33,13 +33,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="yNtRE2YVVB5kZNCRv-Dg-8" value="Users" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="720" y="120" width="135" height="135" as="geometry" />
+          <mxGeometry x="640" y="120" width="200" height="200" as="geometry" />
         </mxCell>
-        <mxCell id="yNtRE2YVVB5kZNCRv-Dg-9" value="&lt;u&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;attributes&lt;/font&gt;&lt;br&gt;&lt;/u&gt;first name&lt;br&gt;last name&lt;br&gt;email?&lt;br&gt;has_many reviews" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="732.5" y="290" width="110" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="yNtRE2YVVB5kZNCRv-Dg-10" value="Log In?" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
-          <mxGeometry x="757.5" y="210" width="60" height="20" as="geometry" />
+        <mxCell id="yNtRE2YVVB5kZNCRv-Dg-9" value="&lt;u&gt;&lt;font style=&quot;font-size: 14px&quot;&gt;attributes&lt;/font&gt;&lt;br&gt;&lt;/u&gt;first name&lt;br&gt;last name&lt;br&gt;email?&lt;br&gt;has_many reviews&lt;br&gt;Log In" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="660" y="355" width="110" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
