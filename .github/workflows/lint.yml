@@ -8,4 +8,4 @@ jobs:
     - name: Install modules
       run: yarn
     - name: Run ESLint
-      run: eslint/github-action@v0
+      run: npm run-script eslint/github-action@v0
