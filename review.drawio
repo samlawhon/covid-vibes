@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" modified="2020-10-19T19:10:49.120Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.80 Safari/537.36" etag="txwR10R8Z6Xnxlq1qveN" version="13.7.9" type="github">
+  <diagram id="O_MPFdlUCUszUIpjvyL6" name="Page-1">
+    <mxGraphModel dx="946" dy="591" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.535;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="UV_nqPrfPAVF_AMjc2RL-1" target="UV_nqPrfPAVF_AMjc2RL-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-2" value="RESTAURANTS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="130" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-3" value="" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+          <mxGeometry x="325" y="411" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-4" value="COVID VIBES&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="385" y="430" width="45" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-6" value="" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" vertex="1" parent="1">
+          <mxGeometry x="585" y="116" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-7" value="USERS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="120" width="150" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-8" value="name&lt;br&gt;favorite (optiona)&lt;br&gt;has many reveiws" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="605" y="151" width="170" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-9" value="has many users" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="160" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="UV_nqPrfPAVF_AMjc2RL-11" value="&lt;h1&gt;Restaurants&lt;/h1&gt;&lt;div&gt;has many users&lt;/div&gt;&lt;div&gt;has many reviews&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;attributes:&lt;/div&gt;&lt;div&gt;name&lt;/div&gt;&lt;div&gt;address&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="595" y="400" width="245" height="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
