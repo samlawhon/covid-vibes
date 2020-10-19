@@ -1,4 +1,4 @@
-name: CI
+name: JavaScript linting
 on: push
 jobs:
   build:
