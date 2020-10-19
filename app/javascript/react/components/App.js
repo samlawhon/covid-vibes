@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const App = (props) => {
+export const App = () => {
   return (<h1>Make It So React</h1>)
 }
 
