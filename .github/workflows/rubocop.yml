@@ -1,9 +1,11 @@
-name: Ruby linting
+name: CI
 on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install rubocop
+      run: gem install rubocop
     - name: Run Rubocop
       run: npm run-script rubocop/github-action@v0
