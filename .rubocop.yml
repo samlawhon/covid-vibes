@@ -23,3 +23,15 @@ Lint:
 
 Naming:
   Enabled: true
+
+Style/ClassMethods:
+  Enabled: true
+
+Style/EmptyElse:
+  Enabled: true
+
+Style/HashSyntax:
+  Enabled: true
+
+Style/Semicolon:
+  Enabled: true

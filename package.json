@@ -35,7 +35,8 @@
     "start": "./bin/webpack-dev-server",
     "test": "node_modules/.bin/jest",
     "test:dev": "node_modules/.bin/jest --notify --watch",
-    "eslint/github-action@v0": "eslint ./app/javascript/react --ext .js,.jsx,.ts,.tsx"
+    "eslint/github-action@v0": "eslint ./app/javascript/react --ext .js,.jsx,.ts,.tsx",
+    "rubocop/github-action@v0": "rubocop"
   },
   "jest": {
     "automock": false,
