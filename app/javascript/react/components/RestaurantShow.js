@@ -1,12 +1,20 @@
 import React from 'react'
+import { Link } from "react-router-dom"
+import RestaurantTile from './RestaurantTile'
 
-export const RestaurantShow = (props) => {
-    const restaurantName = "Big Harry's"
-    const restaurantDesc = "The best barbecue"
-    const wearMasks = false
-    const socialDistance = false
+const RestaurantShow = (props) => {
+debugger
 
-    return (<h1>Test</h1>)
+    return (
+        <div>
+            <p key={props.id}>
+                <Link to={`restaurant/${props.id}`}>
+                    {props.name}
+                </Link > 
+                
+            </p>
+        </div>
+    )
 }
 
 export default RestaurantShow
