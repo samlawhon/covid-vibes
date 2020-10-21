@@ -1,17 +1,33 @@
-import React from 'react'
-import { Link } from "react-router-dom"
-import RestaurantTile from './RestaurantTile'
+import React, { useState, useEffect } from 'react'
 
 const RestaurantShow = (props) => {
-debugger
+    const [restaurant, setRestaurant] = useState({})
+
+    const id = props.match.params.id
+
+    useEffect(() => {
+        fetch(`/api/v1/restaurants/${id}`)
+        .then(response => {
+          if (response.ok) {
+            return response
+          } else {
+            let errorMessage = `${response.status} (${response.statusText})`,
+                error = new Error(errorMessage);
+            throw(error);
+          }
+        })
+        .then(response => response.json())
+        .then(body => {
+          setRestaurant(body)
+        })
+    
+        .catch(error => console.error(`Error in fetch: ${error.message}`))
+      }, [])
 
     return (
         <div>
-            <p key={props.id}>
-                <Link to={`restaurant/${props.id}`}>
-                    {props.name}
-                </Link > 
-                
+            <p>
+                {restaurant.name}
             </p>
         </div>
     )

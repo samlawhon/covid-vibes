@@ -2,8 +2,6 @@ import React from 'react'
 import RestaurantIndex from "./RestaurantIndex.js"
 import RestaurantShow from "./RestaurantShow.js"
 import {Route, Switch, BrowserRouter} from "react-router-dom"
-// import restaurantsdata from "/constants/restaurantsdata"
-
 
 const App = () => { 
   

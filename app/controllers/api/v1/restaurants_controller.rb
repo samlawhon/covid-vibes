@@ -15,6 +15,11 @@ class Api::V1::RestaurantsController < ApplicationController
     render json: filter_restaurants(open_street_map_restaurants)
   end
 
+  def show
+    restaurant = Restaurant.find(params[:id])
+    render json: restaurant
+  end
+
   private
 
   def get_restaurants(lat, lon, latitude_diff, longitude_diff)
