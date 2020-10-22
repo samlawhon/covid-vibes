@@ -24,6 +24,20 @@ ActiveRecord::Schema.define(version: 2020_10_22_144156) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer "rating"
+    t.boolean "party_size", null: false
+    t.boolean "masks_employees", null: false
+    t.boolean "masks_customers", null: false
+    t.boolean "social_distancing", null: false
+    t.bigint "user_id", null: false
+    t.bigint "restaurant_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
   create_table "search_results", force: :cascade do |t|
     t.bigint "search_id", null: false
     t.bigint "restaurant_id", null: false
@@ -43,8 +57,6 @@ ActiveRecord::Schema.define(version: 2020_10_22_144156) do
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "first_name", null: false
-    t.string "last_name", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
