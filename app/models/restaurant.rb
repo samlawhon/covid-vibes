@@ -5,4 +5,6 @@ class Restaurant < ApplicationRecord
   validates :id, presence: true
   has_many :search_results
   has_many :searches, through: :search_results
+
+  has_many :reviews
 end

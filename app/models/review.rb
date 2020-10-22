@@ -5,4 +5,8 @@ class Review < ApplicationRecord
   validates :party_size, presence: true
   validates :social_distancing, presence: true
   validates :id, presence: true
+
+belongs_to :use
+belongs_to :restaurant
+
 end
