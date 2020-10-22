@@ -3,16 +3,26 @@ require "geocoder"
 
 class Api::V1::RestaurantsController < ApplicationController
   def index
-    first_result = Geocoder.search(params[:location])[0]
-    lat = first_result.data["lat"].to_f
-    lon = first_result.data["lon"].to_f
+    if Search.where(search: params[:location]).empty?
+      search = Search.new(search: params[:location])
+      
+      if !search.save
+        return render json: 'Given empty location'
+      end
 
-    longitude_diff = 0.01
-    latitude_diff = 0.01
+      first_result = Geocoder.search(params[:location])[0]
+      lat = first_result.data["lat"].to_f
+      lon = first_result.data["lon"].to_f
 
-    open_street_map_restaurants = get_restaurants(lat, lon, latitude_diff, longitude_diff)
+      longitude_diff = 0.01  # about 0.5 miles
+      latitude_diff = 0.01   # about 0.5 miles
 
-    render json: filter_restaurants(open_street_map_restaurants)
+      open_street_map_restaurants = get_restaurants(lat, lon, latitude_diff, longitude_diff)
+
+      render json: filter_restaurants(open_street_map_restaurants, search)
+    else
+      render json: Search.find_by(search: params[:location]).restaurants
+    end
   end
 
   def show
@@ -36,7 +46,7 @@ class Api::V1::RestaurantsController < ApplicationController
     return response[:elements]
   end
 
-  def filter_restaurants(open_street_map_restaurants)
+  def filter_restaurants(open_street_map_restaurants, search)
     restaurants = []
 
     open_street_map_restaurants.each do |restaurant|
@@ -54,6 +64,7 @@ class Api::V1::RestaurantsController < ApplicationController
         }
 
         restaurant_candidate = Restaurant.new(restaurant_hash)
+        restaurant_candidate.searches << search
 
         if restaurant_candidate.save
           restaurants.push(restaurant_candidate)
