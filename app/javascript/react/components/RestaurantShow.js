@@ -1,12 +1,36 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-export const RestaurantShow = (props) => {
-    const restaurantName = "Big Harry's"
-    const restaurantDesc = "The best barbecue"
-    const wearMasks = false
-    const socialDistance = false
+const RestaurantShow = (props) => {
+    const [restaurant, setRestaurant] = useState({})
 
-    return (<h1>Test</h1>)
+    const id = props.match.params.id
+
+    useEffect(() => {
+        fetch(`/api/v1/restaurants/${id}`)
+        .then(response => {
+          if (response.ok) {
+            return response
+          } else {
+            let errorMessage = `${response.status} (${response.statusText})`,
+                error = new Error(errorMessage);
+            throw(error);
+          }
+        })
+        .then(response => response.json())
+        .then(body => {
+          setRestaurant(body)
+        })
+    
+        .catch(error => console.error(`Error in fetch: ${error.message}`))
+      }, [])
+
+    return (
+        <div>
+            <p>
+                {restaurant.name}
+            </p>
+        </div>
+    )
 }
 
 export default RestaurantShow
