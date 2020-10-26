@@ -7,11 +7,21 @@ const RestaurantIndex = (props) => {
 
    useEffect(() => {
     fetch('/api/v1/restaurants?location=boston')
-      .then(response => response.json())
-      .then(responseBody => {
-          setRestaurantData(responseBody)
-      })
-    }, [])
+    .then(response => {
+      if (response.ok) {
+        return response
+      } else {
+        let errorMessage = `${response.status} (${response.statusText})`,
+          error = new Error(errorMessage);
+        throw (error);
+      }
+    })
+    .then(response => response.json())
+    .then(responseBody => {
+      setRestaurantData(responseBody)
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
+   }, [])
 
   const restaurantTileArray  = restaurantData.map((restaurant) => {
       
