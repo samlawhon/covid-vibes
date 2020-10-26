@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import RestaurantTile from './RestaurantTile'
 
@@ -26,20 +25,18 @@ const RestaurantIndex = (props) => {
   const restaurantTileArray  = restaurantData.map((restaurant) => {
       
     return(
-      <div>
-        <RestaurantTile
-          name={restaurant.name}
-          id={restaurant.id}
-          key={restaurant.id}
-        />
-      </div>
+      <RestaurantTile
+        name={restaurant.name}
+        id={restaurant.id}
+        key={restaurant.id}
+      />
     )
   }) 
 
   return(
-    <div>
-      {restaurantTileArray}
-    </div>
+      <ul>
+        {restaurantTileArray}
+      </ul>
   )
 }  
   

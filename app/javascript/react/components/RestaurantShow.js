@@ -17,19 +17,16 @@ const RestaurantShow = (props) => {
         }
       })
       .then(response => response.json())
-        .then(responseBody => {
-          setRestaurant(responseBody)
+      .then(responseBody => {
+        setRestaurant(responseBody)
       })
-  
-      .catch(error => console.error(`Error in fetch: ${error.message}`))
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
     }, [])
 
   return (
-    <div>
-      <p>
+      <h1>
         {restaurant.name}
-      </p>
-    </div>
+      </h1>
   )
 }
 
