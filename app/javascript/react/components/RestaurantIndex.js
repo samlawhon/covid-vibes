@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import RestaurantTile from './RestaurantTile'
 
@@ -35,11 +34,9 @@ const RestaurantIndex = (props) => {
   }) 
 
   return(
-    <div>
       <ul>
         {restaurantTileArray}
       </ul>
-    </div>
   )
 }  
   
