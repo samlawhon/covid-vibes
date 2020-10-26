@@ -29,4 +29,5 @@
 yarn-debug.log*
 .yarn-integrity
 
-.DS_Store
+# some mac stuff under the hood?
+.DS_store
