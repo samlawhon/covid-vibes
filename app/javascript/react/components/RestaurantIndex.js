@@ -26,19 +26,19 @@ const RestaurantIndex = (props) => {
   const restaurantTileArray  = restaurantData.map((restaurant) => {
       
     return(
-      <div>
-        <RestaurantTile
-          name={restaurant.name}
-          id={restaurant.id}
-          key={restaurant.id}
-        />
-      </div>
+      <RestaurantTile
+        name={restaurant.name}
+        id={restaurant.id}
+        key={restaurant.id}
+      />
     )
   }) 
 
   return(
     <div>
-      {restaurantTileArray}
+      <ul>
+        {restaurantTileArray}
+      </ul>
     </div>
   )
 }  
