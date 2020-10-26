@@ -1,5 +1,6 @@
 require "rails_helper"
 require "json"
+
 RSpec.describe Api::V1::RestaurantsController, type: :controller do
   describe "GET#index" do
 
