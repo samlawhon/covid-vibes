@@ -28,3 +28,6 @@
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+
+# some mac stuff under the hood?
+.DS_store
