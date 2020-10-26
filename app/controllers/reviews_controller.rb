@@ -1,18 +1,17 @@
-class ReviewsController < ApplicationController
+class Api::ReviewsController < ApplicationController
+     protect_from_forgery unless: -> { request.format.json? }
     def new
-        @review = Review.new
+        review = Review.new
     end
 
     def create
-        @restaurant = Restaurant.find(params[:restaurant_id])
-        @review = review.new(review_params)
-        @review.restaurant = @restaurant
-    end
-
-
-    private
-
-    def review_params
-        params.require(:review).permit(:rating, :masks_employees, :masks_customers, :social_distancing )
-    end
+        restaurant = Restaurant.find(params[:restaurant_id])
+        review = Review.new(text: params[:review])
+        review.restaurant = restaurant
+        if review.save
+            render json: { review: review }
+        else
+            render json: { error: review.errors.full_messages }, status: :unprocessable_entity
+        end
+    end    
 end
