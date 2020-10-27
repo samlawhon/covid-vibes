@@ -3,6 +3,7 @@ class Api::V1::ReviewsController < ApplicationController
   before_action :authenticate_user 
 
   def create
+    binding.pry
     restaurant = Restaurant.find(params[:restaurant_id])
     review = Review.new(params[:review])
     
@@ -23,7 +24,6 @@ class Api::V1::ReviewsController < ApplicationController
 
   def authenticate_user
     if !user_signed_in?
-      # binding.pry
       render json: {error: ["You need to be signed in first"]}
     end
   end
