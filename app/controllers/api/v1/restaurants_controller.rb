@@ -69,7 +69,6 @@ class Api::V1::RestaurantsController < ApplicationController
         if restaurant_candidate.save
           restaurants.push(restaurant_candidate)
         end
-
       end
     end
     return restaurants

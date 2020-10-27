@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ReviewForm from "./ReviewForm.js"
 
 const RestaurantShow = (props) => {
     const [restaurant, setRestaurant] = useState({})
@@ -25,11 +26,15 @@ const RestaurantShow = (props) => {
       }, [])
 
     return (
-        <div>
-            <p>
-                {restaurant.name}
-            </p>
-        </div>
+      <div>
+        <h2>
+          {restaurant.name}
+        </h2>
+        <p>
+          Cuisine Type: {restaurant.cuisine}
+        </p>
+        <ReviewForm id={id}/>
+      </div>
     )
 }
 
