@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ReviewForm from "./ReviewForm.js"
 
 const RestaurantShow = (props) => {
     const [restaurant, setRestaurant] = useState({})
@@ -23,11 +24,17 @@ const RestaurantShow = (props) => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
     }, [])
 
-  return (
-      <h1>
-        {restaurant.name}
-      </h1>
-  )
+    return (
+      <div>
+        <h2>
+          {restaurant.name}
+        </h2>
+        <p>
+          Cuisine Type: {restaurant.cuisine}
+        </p>
+        <ReviewForm id={id}/>
+      </div>
+    )
 }
 
 export default RestaurantShow
