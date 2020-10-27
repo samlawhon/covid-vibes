@@ -2,7 +2,6 @@ import { post } from 'fetch-mock'
 import React, { useEffect, useState } from 'react'
 
 const ReviewForm = (props) => {
-
   const [getReviewData, setReviewData] = useState([])
   const [getNewReview, setNewReview] = useState({masks_customers: false, masks_employees: false, social_distancing: false, party_size: false })
 
@@ -13,7 +12,7 @@ const ReviewForm = (props) => {
       [event.currentTarget.name]: event.currentTarget.value
     })
   }
-console.log(getNewReview)
+
   let handleSubmit = (event) => {
     
     event.preventDefault()

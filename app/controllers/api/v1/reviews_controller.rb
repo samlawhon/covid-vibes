@@ -3,7 +3,7 @@ class Api::V1::ReviewsController < ApplicationController
 
   def create
     restaurant = Restaurant.find(params[:restaurant_id])
-    review = Review.new(params[:review])
+    review = Review.new(review_params)
     
     review.restaurant = restaurant
     
@@ -17,6 +17,6 @@ class Api::V1::ReviewsController < ApplicationController
   private 
 
   def review_params
-    params.require(:review).permit(:masks_customer, :masks_customers, :party_size, :social_distancing)
+    params.require(:review).permit(:masksCustomer, :masksEmployees, :partySize, :socialDistancing)
   end
 end
