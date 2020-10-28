@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReviewForm from "./ReviewForm.js"
+import ReviewTile from './ReviewTile'
 
 const RestaurantShow = (props) => {
     const [restaurant, setRestaurant] = useState({})
@@ -24,7 +25,21 @@ const RestaurantShow = (props) => {
     .catch(error => console.error(`Error in fetch: ${error.message}`))
     }, [])
 
-    return (
+    const reviewTileArray  = () => restaurant.reviews.map((review) => {
+      
+      return(
+        <ReviewTile
+          key={review.id}
+          rating={review.rating}
+          partySize={review.party_size}
+          masksEmployees={review.masks_employees}
+          masksCustomers={review.masks_customers}
+          socialDistancing={review.social_distancing}
+        />
+      )
+    }) 
+  
+    return(
       <div>
         <h2>
           {restaurant.name}
@@ -33,6 +48,9 @@ const RestaurantShow = (props) => {
           Cuisine Type: {restaurant.cuisine}
         </p>
         <ReviewForm id={id}/>
+        <ul>
+          {Object.keys(restaurant).length !== 0 ? reviewTileArray() : null}
+        </ul>
       </div>
     )
 }
