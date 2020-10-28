@@ -21,3 +21,19 @@ li {
 .hero-nav-fix {
   padding: 5rem 0 0 0;
 }
+
+.footer {
+  background-color: $space-cadet;
+
+  p {
+    color: $alice-blue;
+    line-height: .7rem;
+  }
+}
+
+
+@include breakpoint(small only) {
+  .square-box {
+    max-height: 100%;
+  }
+}

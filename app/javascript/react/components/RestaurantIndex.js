@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import RestaurantTile from './RestaurantTile'
+import React, { useEffect, useState } from 'react';
+import RestaurantTile from './RestaurantTile';
+import RestaurantMap from './RestaurantsMap';
 
 const RestaurantIndex = (props) => {
   const [restaurantData, setRestaurantData] = useState([])
@@ -53,15 +54,13 @@ const RestaurantIndex = (props) => {
             </div>
         </div>
       </form>
-      <div  className="cell medium-auto medium-cell-block-container">
+      <div className="cell medium-auto medium-cell-block-container">
         <div className="grid-x grid-padding-x" >
           <div className="cell medium-6 medium-cell-block-y">
-            <ul>
               {restaurantTileArray}
-            </ul>
           </div>
           <div className="cell medium-6 medium-cell-block-y">
-          <p>future map</p>
+            {restaurantData.length !== 0 ? <RestaurantMap restaurantsData={restaurantData} /> : null }
           </div>
         </div>
       </div>

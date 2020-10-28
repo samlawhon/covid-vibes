@@ -2,6 +2,11 @@
 <html>
 <head>
   <title>ReviewSite</title>
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" 
+  crossorigin=""/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
@@ -50,13 +55,13 @@
   
   <%= yield :extra_footer %>
 
-  <footer class="grid-container fluid">
-    <div class="grid-x grid-padding-x grid-padding-y align-bottom">
+  <footer class="footer grid-container fluid">
+    <div class="grid-x grid-padding-x grid-padding-y text-center">
       <div class="cell medium-6">
-        <h4>CovidVibes</h4>
+        <p>CovidVibes</p>
       </div>
       <div class="cell medium-6">
-        <h5>Did some stuff 2020</h5>
+        <p>Did some stuff 2020</p>
       </div>
     </div>
   </footer>
