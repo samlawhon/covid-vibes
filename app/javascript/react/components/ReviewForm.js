@@ -1,5 +1,5 @@
-import { post } from 'fetch-mock'
-import React, { useEffect, useState } from 'react'
+import { post } from 'fetch-mock' //What dis
+import React, { useState } from 'react'
 
 const ReviewForm = (props) => {
   const [getReviewData, setReviewData] = useState([])
@@ -7,9 +7,12 @@ const ReviewForm = (props) => {
 
   const handleInputChange = event => {
 
+    const target = event.currentTarget;
+    const value = target.type === 'checkbox' ? target.checked : Number(target.value);
+
     setNewReview({
       ...getNewReview,
-      [event.currentTarget.name]: event.currentTarget.value
+      [event.currentTarget.name]: value
     })
   }
 
@@ -19,6 +22,7 @@ const ReviewForm = (props) => {
     let formPayload = {
       review: getNewReview
     }
+    console.log(formPayload)
     fetch(`/api/v1/restaurants/${props.id}/reviews`, {
       credentials: "same-origin",
       method: "POST",
@@ -29,7 +33,7 @@ const ReviewForm = (props) => {
       }
   })
 
-  .then(response => {a
+  .then(response => {
     if (response.ok) {
       return response
   } else {
@@ -51,12 +55,12 @@ const ReviewForm = (props) => {
     <form onSubmit={handleSubmit}>
       <label>Add A Review</label>
       <label>
-          Are the employees wearing masks? 
-          <input
-              name="masks_employees"
-              type="checkbox"
-              checked={getNewReview.masks_employees}
-              onChange={handleInputChange} />
+        Are the employees wearing masks? 
+        <input
+          name="masks_employees"
+          type="checkbox"
+          checked={getNewReview.masks_employees}
+          onChange={handleInputChange} />
       </label>
       <label>
         Are the customers wearing masks?

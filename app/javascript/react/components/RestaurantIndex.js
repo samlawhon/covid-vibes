@@ -34,9 +34,9 @@ const RestaurantIndex = (props) => {
   }) 
 
   return(
-      <ul>
-        {restaurantTileArray}
-      </ul>
+    <ul>
+      {restaurantTileArray}
+    </ul>
   )
 }  
   
