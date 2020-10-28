@@ -1,0 +1,23 @@
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui/motion-ui';
+
+.square-box {
+  max-height: 700px;
+  margin: 1rem auto;
+  box-shadow: 1px 1px 10px 1px $light-steel;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+li {
+  list-style: none;
+}
+
+.callout.shaded {
+  border-color: $alice-blue;
+}
+
+.hero-nav-fix {
+  padding: 5rem 0 0 0;
+}
