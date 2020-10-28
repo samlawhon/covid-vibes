@@ -1,4 +1,3 @@
-import { post } from 'fetch-mock' //What dis
 import React, { useState } from 'react'
 
 const ReviewForm = (props) => {
@@ -16,7 +15,7 @@ const ReviewForm = (props) => {
     })
   }
 
-  let handleSubmit = (event) => {
+  let handleSubmit = (event) => { 
     
     event.preventDefault()
     let formPayload = {
@@ -28,11 +27,10 @@ const ReviewForm = (props) => {
       method: "POST",
       body: JSON.stringify(formPayload),
       headers: {
-        Accept: "application/json",
+        'Accept': 'application/json',
         "Content-Type": "application/json"
       }
   })
-
   .then(response => {
     if (response.ok) {
       return response
@@ -42,13 +40,11 @@ const ReviewForm = (props) => {
       throw error
     }
   })
-
   .then(response => response.json())
   .then(body => {
     setReviewData([...getReviewData, getNewReview])
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`))
-
   }
 
   return(
