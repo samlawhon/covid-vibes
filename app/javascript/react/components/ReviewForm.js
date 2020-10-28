@@ -22,7 +22,7 @@ const ReviewForm = (props) => {
     let formPayload = {
       review: getNewReview
     }
-    console.log(formPayload)
+
     fetch(`/api/v1/restaurants/${props.id}/reviews`, {
       credentials: "same-origin",
       method: "POST",
