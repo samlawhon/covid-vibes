@@ -1,17 +1,17 @@
-import React from 'react';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import React from "react";
+import { Map, Marker, Popup, TileLayer } from "react-leaflet";
 import { Link } from "react-router-dom";
 
 const RestaurantMap = props => {
 
-  const center = [42.3601, -71.0589];
+  const center = [42.3601, -71.0589];  // Boston coordinates, just until search bar up and running
 
   const restaurants = props.restaurantsData.map((restaurant) => (
     <Marker position={[restaurant.latitude, restaurant.longitude]} key={restaurant.id}>
       <Popup>
         <Link to={`restaurant/${restaurant.id}`}>
           {restaurant.name}
-        </Link >
+        </Link>
       </Popup>
     </Marker>
   ));

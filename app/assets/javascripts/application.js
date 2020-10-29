@@ -12,13 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-<<<<<<< HEAD
-//= //= require foundation
-//require_tree .
-=======
 //= require foundation
 // = require_tree .
->>>>>>> a2c9f2b... basic css styling
 
 $(function(){ $(document).foundation(); });
 
