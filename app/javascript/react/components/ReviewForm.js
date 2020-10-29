@@ -6,13 +6,13 @@ const ReviewForm = (props) => {
   const [getNewReview, setNewReview] = useState({masks_customers: false, masks_employees: false, social_distancing: false, party_size: false })
   const [errorList, setErrorList] = useState([])
 
-  const handleInputChange = event => {
+    const handleInputChange = event => {
 
-    setNewReview({
-      ...getNewReview,
-      [event.currentTarget.name]: event.currentTarget.value
-    })
-  }
+      setNewReview({
+        ...getNewReview,
+        [event.currentTarget.name]: event.currentTarget.value
+      })
+    }
 
   let handleSubmit = (event) => {
     
