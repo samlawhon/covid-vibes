@@ -27,7 +27,6 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
     }
 
     a {
-      // color: $space-cadet;
       transition: color 0.15s ease-in;
 
       &:hover {
@@ -75,10 +74,7 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
       }
     }
   }
-
-
-
-
+  
    @media screen and (max-width: 39.9375em) {
      padding: 0.75rem;
 
