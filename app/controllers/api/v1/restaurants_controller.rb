@@ -1,8 +1,5 @@
 require 'overpass_api_ruby'
 require "geocoder"
-#require 'reviews_controller'
-
-
 
 class Api::V1::RestaurantsController < ApplicationController
   before_action :authenticate_user, except: [:index, :show] 
@@ -79,11 +76,4 @@ class Api::V1::RestaurantsController < ApplicationController
     return restaurants
   end
 
-  protected
-  def authenticate_user
-    if !user_signed_in?
-      render json: {error: ["You need to be signed in first"]}
-    end
-  end
-  
 end

@@ -3,7 +3,7 @@ import UserTile from './UserTile'
 import { createBrowserHistory } from 'history'
 
 const UserShow = (props) => {
-  const [users, setUsers] = useState({})
+  const [user, setUser] = useState({})
   const [errorList, setErrorList] = useState([])
 
   const id = props.match.params.id
@@ -21,9 +21,8 @@ const UserShow = (props) => {
       })
       .then(response => response.json())
       .then(responseBody => {
-        debugger
         if (responseBody.id !== null) {
-          setUsers(responseBody)
+          setUser(responseBody)
         } else if (responseBody.error[0] === "You need to be signed in first") {
           props.history.go("/users/sign_in")
         } else if (responseBody.error) {
@@ -41,7 +40,7 @@ const UserShow = (props) => {
 
   return (
     <div>
-      <UserTile users={users} />
+      <UserTile user={user} />
     </div>
   )
 }
