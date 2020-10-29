@@ -21,7 +21,6 @@ const UserShow = props => {
       })
       .then(response => response.json())
       .then(responseBody => {
-        debugger
         if (responseBody.id !== null) {
           setUsers(responseBody)
         } else if (responseBody.error[0] === "You need to be signed in first") {

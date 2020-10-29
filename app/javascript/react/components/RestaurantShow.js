@@ -41,7 +41,7 @@ const RestaurantShow = props => {
     }
   })
   .then(response => response.json())
-  .then(body => {console.log(body); setReviewData([...getReviewData, body]);})
+  .then(body => setReviewData([...getReviewData, body.review]))
   .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
@@ -68,11 +68,14 @@ const RestaurantShow = props => {
       }
     })
     .then(response => response.json())
-    .then(responseBody => setRestaurant(responseBody))
+    .then(responseBody => {
+      setRestaurant(responseBody);
+      setReviewData(responseBody.reviews);
+    })
   .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, [])
 
-  const reviewTileArray = () => restaurant.reviews.map((review) => (
+  const reviewTileArray = () => getReviewData.map((review) => (
     <ReviewTile
       key={review.id}
       rating={review.rating}
