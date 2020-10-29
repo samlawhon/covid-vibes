@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net" modified="2020-10-27T16:34:06.562Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36" etag="vC-TuO6Oxwmk1egB30uS" version="13.8.3" type="github" pages="4">
+  <diagram id="AyF-QWAafop9oIFnjlfA" name="LANDING">
+    <mxGraphModel dx="1426" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="zOhlkpNpokJZTiqPkJqF-0" />
+        <mxCell id="zOhlkpNpokJZTiqPkJqF-1" parent="zOhlkpNpokJZTiqPkJqF-0" />
+        <mxCell id="8y1lE9bjN2-4CnzfDUFi-0" value="you gotta sign up first to see the site" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="zOhlkpNpokJZTiqPkJqF-1">
+          <mxGeometry x="190" y="160" width="490" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="tL8Tf_DKpckHldaJc11E-0" value="covid data api?" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zOhlkpNpokJZTiqPkJqF-1">
+          <mxGeometry x="200" y="720" width="480" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="3Js-jWb_vjO0Y02GWSNI" name="HOME PAGE">
+    <mxGraphModel dx="1426" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oW39knJ4_CaWLylLQXzI-1" value="covid vibes logo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="100" width="330" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="oW39knJ4_CaWLylLQXzI-2" value="search" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="360" width="320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oW39knJ4_CaWLylLQXzI-4" value="photo of&amp;nbsp;&lt;br&gt;user" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="10" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oW39knJ4_CaWLylLQXzI-5" value="coviid" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="10" width="660" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oW39knJ4_CaWLylLQXzI-8" value="restaurants list based on the search" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="300" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="oW39knJ4_CaWLylLQXzI-9" value="map" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="480" y="440" width="300" height="300" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Rest show page" id="g3uK3B3Kwa5mM-TPg_LF">
+    <mxGraphModel dx="1426" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="1Tbj6Ryn1ClyVqWCSJ6B-0" />
+        <mxCell id="1Tbj6Ryn1ClyVqWCSJ6B-1" parent="1Tbj6Ryn1ClyVqWCSJ6B-0" />
+        <mxCell id="1Tbj6Ryn1ClyVqWCSJ6B-2" value="covid vibes logo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1Tbj6Ryn1ClyVqWCSJ6B-1">
+          <mxGeometry x="240" y="120" width="330" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="1Tbj6Ryn1ClyVqWCSJ6B-4" value="photo of&amp;nbsp;&lt;br&gt;user" style="whiteSpace=wrap;html=1;" vertex="1" parent="1Tbj6Ryn1ClyVqWCSJ6B-1">
+          <mxGeometry x="700" y="10" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1Tbj6Ryn1ClyVqWCSJ6B-5" value="covid" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1Tbj6Ryn1ClyVqWCSJ6B-1">
+          <mxGeometry x="30" y="10" width="660" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9UkSwaOHI4hMPdsDJ41v-0" value="list of reviews" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1Tbj6Ryn1ClyVqWCSJ6B-1">
+          <mxGeometry x="240" y="360" width="320" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="9UkSwaOHI4hMPdsDJ41v-2" value="form to add a review" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1Tbj6Ryn1ClyVqWCSJ6B-1">
+          <mxGeometry x="240" y="760" width="320" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="User Profile Page" id="3YW3eqz9mTRjjctsJFhA">
+    <mxGraphModel dx="1426" dy="771" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="oR04wCGwRJv_la9uIGOF-0" />
+        <mxCell id="oR04wCGwRJv_la9uIGOF-1" parent="oR04wCGwRJv_la9uIGOF-0" />
+        <mxCell id="oR04wCGwRJv_la9uIGOF-2" value="covid vibes logo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="oR04wCGwRJv_la9uIGOF-1">
+          <mxGeometry x="240" y="120" width="330" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="oR04wCGwRJv_la9uIGOF-3" value="photo of&amp;nbsp;&lt;br&gt;user" style="whiteSpace=wrap;html=1;" vertex="1" parent="oR04wCGwRJv_la9uIGOF-1">
+          <mxGeometry x="700" y="10" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oR04wCGwRJv_la9uIGOF-4" value="covid" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="oR04wCGwRJv_la9uIGOF-1">
+          <mxGeometry x="30" y="10" width="660" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oR04wCGwRJv_la9uIGOF-6" value="list of reviews from user" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="oR04wCGwRJv_la9uIGOF-1">
+          <mxGeometry x="240" y="350" width="320" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="oR04wCGwRJv_la9uIGOF-7" value="user info" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="oR04wCGwRJv_la9uIGOF-1">
+          <mxGeometry x="700" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oR04wCGwRJv_la9uIGOF-9" value="possible implementation of update, delete reviews" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="oR04wCGwRJv_la9uIGOF-1">
+          <mxGeometry x="240" y="760" width="320" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
