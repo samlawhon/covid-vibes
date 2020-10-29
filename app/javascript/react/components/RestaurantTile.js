@@ -4,11 +4,15 @@ import { Link } from "react-router-dom"
 const RestaurantTile = (props) => {
 
   return (
-      <li>
+
+    <div className="callout shaded">
+      <h5>{props.name}</h5>
+      <button type="button" className="success button small expanded">
         <Link to={`restaurant/${props.id}`}>
-          {props.name}
+            Visit
         </Link > 
-      </li>
+        </button>
+    </div>
   )
 }
 

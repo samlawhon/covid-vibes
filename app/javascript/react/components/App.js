@@ -7,7 +7,6 @@ import RestaurantShow from "./RestaurantShow.js"
 const App = () => { 
   
   return (
-  <div>
     <BrowserRouter>
       <Switch>
         <Route exact path="/" component={RestaurantIndex}/>
@@ -15,7 +14,6 @@ const App = () => {
         <Route exact path="/restaurant/:id" component={RestaurantShow}/>
       </Switch> 
     </BrowserRouter>
-  </div>
   )
 }
 
