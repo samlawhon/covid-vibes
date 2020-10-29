@@ -11,7 +11,7 @@ const RestaurantShow = props => {
   const handleSubmit = (event, getNewReview) => { 
     
     event.preventDefault();
-    console.log(getNewReview)
+
     const formPayload = {
       review: getNewReview
     }
@@ -74,8 +74,8 @@ const RestaurantShow = props => {
       <h2>{restaurant.name}</h2>
       <p>Cuisine Type: {restaurant.cuisine}</p>
       <ReviewForm 
-      id={id} 
-      handleSubmit={handleSubmit}
+        id={id} 
+        handleSubmit={handleSubmit}
       />
       <ul>
         {Object.keys(restaurant).length !== 0 ? reviewTileArray() : null}

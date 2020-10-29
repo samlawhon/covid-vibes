@@ -32,6 +32,8 @@ const RestaurantIndex = () => {
     />
   ));
 
+  const restaurantMap = restaurantData.length !== 0 ? <RestaurantMap restaurantsData={restaurantData} /> : null;
+
   return(
     <Fragment>
       <div className="grid-x text-center grid-padding-y">
@@ -58,7 +60,7 @@ const RestaurantIndex = () => {
                 {restaurantTileArray}
             </div>
             <div className="cell medium-6 medium-cell-block-y">
-              {restaurantData.length !== 0 ? <RestaurantMap restaurantsData={restaurantData} /> : null }
+              {restaurantMap}
             </div>
           </div>
         </div>
