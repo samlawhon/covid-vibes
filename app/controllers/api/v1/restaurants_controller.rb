@@ -2,6 +2,8 @@ require 'overpass_api_ruby'
 require "geocoder"
 
 class Api::V1::RestaurantsController < ApplicationController
+  before_action :authenticate_user, except: [:index, :show] 
+
   def index
     if Search.where(search: params[:location]).empty?
       search = Search.new(search: params[:location])
@@ -27,7 +29,7 @@ class Api::V1::RestaurantsController < ApplicationController
 
   def show
     restaurant = Restaurant.find(params[:id])
-    render json: restaurant
+    render json: restaurant, serializer: RestaurantShowSerializer
   end
 
   private
@@ -69,9 +71,9 @@ class Api::V1::RestaurantsController < ApplicationController
         if restaurant_candidate.save
           restaurants.push(restaurant_candidate)
         end
-
       end
     end
     return restaurants
   end
+
 end

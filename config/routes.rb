@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   namespace :api do    
     namespace :v1 do      
-      resources :restaurants, only: [:index, :show]    
+      resources :restaurants, only: [:index, :show]
+      resources :users, only: [:show] do
+        resources :reviews, only: [:create, :new, :destroy]   
+      end
     end  
   end
  

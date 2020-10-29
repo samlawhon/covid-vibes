@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+# gem for Serializers
+gem 'active_model_serializers'
 # gem wrapper for OpenStreetMap OverpassAPI
 gem 'overpass-api-ruby', '~> 0.3' 
 # Gem for Geocoder
