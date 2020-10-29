@@ -18,9 +18,12 @@
     "@babel/runtime": "^7.6.2",
     "@rails/webpacker": "3.5",
     "babel-loader": "^8.0.6",
+    "leaflet": "^1.7.1",
+    "history": "^5.0.0",
     "prop-types": "~15.6.0",
     "react": "~16.8.0",
     "react-dom": "~16.8.0",
+    "react-leaflet": "^2.8.0",
     "react-router-dom": "^5.2.0",
     "redbox-react": "1.6.0"
   },

@@ -5,7 +5,7 @@ class Api::V1::RestaurantsController < ApplicationController
   def index
     if Search.where(search: params[:location]).empty?
       search = Search.new(search: params[:location])
-      
+
       if !search.save
         return render json: 'Given empty location'
       end
@@ -27,7 +27,7 @@ class Api::V1::RestaurantsController < ApplicationController
 
   def show
     restaurant = Restaurant.find(params[:id])
-    render json: restaurant
+    render json: restaurant, serializer: RestaurantShowSerializer
   end
 
   private
@@ -69,7 +69,6 @@ class Api::V1::RestaurantsController < ApplicationController
         if restaurant_candidate.save
           restaurants.push(restaurant_candidate)
         end
-
       end
     end
     return restaurants

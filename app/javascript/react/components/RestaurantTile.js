@@ -1,15 +1,13 @@
-import React from 'react'
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 
-const RestaurantTile = (props) => {
+const RestaurantTile = props => (
+  <div className="callout shaded">
+    <h5>{props.name}</h5>
+    <button type="button" className="success button small expanded">
+      <Link to={`restaurant/${props.id}`}>Visit</Link>
+    </button>
+  </div>
+);
 
-  return (
-      <li>
-        <Link to={`restaurant/${props.id}`}>
-          {props.name}
-        </Link > 
-      </li>
-  )
-}
-
-export default RestaurantTile
+export default RestaurantTile;
