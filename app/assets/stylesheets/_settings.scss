@@ -69,24 +69,28 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #192A51,
-  secondary: #B1C1E7,
-  success: #3adb76,
+  primary: #087E8B,
+  secondary: #97d8c4,
+  success: #6DD400,
   warning: #ffae00,
-  alert: #cc4b37,
+  alert: #e53000,
+  dark-liver: #63585E,
+  sand: #f5cda7
+  
 );
+$dark-liver: #63585E;
 $emerald: #6DD400;
 $light-steel: #B1C1E7;
-$space-cadet: #192A51;
+$space-cadet: #087E8B;
 $light-gray: #e6e6e6;
 $alice-blue: #EFF3FA;
 $medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$dark-gray: #63585E;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
-$body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-color: $dark-liver;
+$body-font-family: 'Raleway', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -142,7 +146,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: 'Paytone One', sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -169,7 +173,7 @@ $header-styles: (
 );
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;
-$header-small-font-color: $medium-gray;
+$header-small-font-color: $dark-liver;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
@@ -207,7 +211,7 @@ $abbr-underline: 1px dotted $black;
 $lead-font-size: $global-font-size * 1.25;
 $lead-lineheight: 1.6;
 $subheader-lineheight: 1.4;
-$subheader-color: $dark-gray;
+$subheader-color: $dark-liver;
 $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;

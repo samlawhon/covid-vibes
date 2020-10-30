@@ -31,6 +31,23 @@ li {
   }
 }
 
+input[type="submit" i] {
+  appearance: push-button;
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  color: -internal-light-dark(black, white);
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  box-sizing: border-box;
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: none;
+  border-image: initial;
+}
+
 
 @include breakpoint(small only) {
   .square-box {

@@ -70,16 +70,20 @@ const RestaurantShow = props => {
   )); 
 
   return (
-    <div>
-      <h2>{restaurant.name}</h2>
-      <p>Cuisine Type: {restaurant.cuisine}</p>
-      <ReviewForm 
-        id={id} 
-        handleSubmit={handleSubmit}
-      />
-      <ul>
+    <div className="grid-x grid-padding-y grid-margin-x">
+      <div className="cell small-12 text-center"> 
+        <h2>{restaurant.name}</h2>
+        <p>Cuisine Type: {restaurant.cuisine}</p>
+      </div>
+      <div className="cell small-12">
+        <ReviewForm 
+          id={id} 
+          handleSubmit={handleSubmit}
+        />
+      </div>
+      <div className="cell small-12">
         {Object.keys(restaurant).length !== 0 ? reviewTileArray() : null}
-      </ul>
+      </div>
     </div>
   );
 }
