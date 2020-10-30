@@ -1,5 +1,7 @@
 require 'factory_bot'
 
+require 'factory_bot'
+
 FactoryBot.define do
   factory :user do
     sequence(:first_name) {|n| "first name #{n}" }
@@ -7,15 +9,15 @@ FactoryBot.define do
     sequence(:email) {|n| "user#{n}@example.com" }
     password { 'password' }
     password_confirmation { 'password' }
-    end
   end
+end
 
-  FactoryBot.define do
+FactoryBot.define do
   factory :restaurant do
     sequence(:name) {|n| "Restaurant #{n}" }
     sequence(:cuisine) {|n| "Burger #{n}" }
-    latitude { 42.363617 }
-    longitude { -71.04873 }
+    latitude { "42.363617" }
+    longitude { "-71.04873" }
     sequence(:id) {|n| "0#{n}" }
   end
 end
