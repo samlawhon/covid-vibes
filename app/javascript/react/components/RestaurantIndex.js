@@ -6,6 +6,7 @@ import SearchForm from "./SearchForm";
 const RestaurantIndex = () => {
 
   const [restaurantData, setRestaurantData] = useState([]);
+  const [coords, setCoords] = useState([42.3601, -71.0589]);  // default to Boston's lat, lon
 
   useEffect(() => {
     fetch('/api/v1/restaurants?location=boston')
@@ -20,13 +21,14 @@ const RestaurantIndex = () => {
     })
     .then(response => response.json())
     .then(responseBody => {
-      setRestaurantData(responseBody)
+      setCoords(responseBody.coords);
+      setRestaurantData(responseBody.restaurants);
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, []);
 
   const handleSubmit = (event, searchBarQuery) => {
-    event.preventDefault();
+    event.preventDefault(); 
     fetch(`/api/v1/restaurants?location=${searchBarQuery.trim()}`)
       .then(response => {
         if (response.ok) {
@@ -39,7 +41,8 @@ const RestaurantIndex = () => {
       })
       .then(response => response.json())
       .then(responseBody => {
-        setRestaurantData(responseBody)
+        setCoords(responseBody.coords);
+        setRestaurantData(responseBody.restaurants);
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
@@ -52,7 +55,14 @@ const RestaurantIndex = () => {
     />
   ));
 
-  const restaurantMap = restaurantData.length !== 0 ? <RestaurantMap restaurantsData={restaurantData} /> : null;
+  let restaurantMap;
+  if (restaurantData.length !== 0) {
+    restaurantMap = (
+      <RestaurantMap 
+      restaurantsData={restaurantData} 
+      coords={coords}/>
+    );
+  }
 
   return(
     <Fragment>

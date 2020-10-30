@@ -3,6 +3,10 @@ require "geocoder"
 
 class Api::V1::RestaurantsController < ApplicationController
   def index
+    first_result = Geocoder.search(params[:location])[0]
+    lat = first_result.data["lat"].to_f
+    lon = first_result.data["lon"].to_f
+    coords = [lat, lon]
     if Search.where(search: params[:location]).empty?
       search = Search.new(search: params[:location])
 
@@ -10,18 +14,17 @@ class Api::V1::RestaurantsController < ApplicationController
         return render json: 'Given empty location'
       end
 
-      first_result = Geocoder.search(params[:location])[0]
-      lat = first_result.data["lat"].to_f
-      lon = first_result.data["lon"].to_f
-
       longitude_diff = 0.01  # about 0.5 miles
       latitude_diff = 0.01   # about 0.5 miles
 
       open_street_map_restaurants = get_restaurants(lat, lon, latitude_diff, longitude_diff)
 
-      render json: filter_restaurants(open_street_map_restaurants, search)
+      filtered_restaurants = filter_restaurants(open_street_map_restaurants, search)
+
+      render json: {"coords": coords, "restaurants": filtered_restaurants}
     else
-      render json: Search.find_by(search: params[:location]).restaurants
+      restaurants = Search.find_by(search: params[:location]).restaurants
+      render json: {"coords": coords, "restaurants": restaurants}
     end
   end
 

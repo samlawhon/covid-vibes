@@ -8,7 +8,6 @@ const SearchForm = props => {
 
     event.preventDefault();
     const value = event.currentTarget.value;
-    console.log(value)
     setSearchBarQuery(value);
   }
 

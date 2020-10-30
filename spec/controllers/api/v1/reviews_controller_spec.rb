@@ -19,8 +19,6 @@ RSpec.describe Api::V1::ReviewsController, type: :controller do
 
         new_count = Review.count
 
-        binding.pry
-
         expect(new_count).to eq previous_count + 1
       end
 
