@@ -7,21 +7,21 @@ const RestaurantIndex = () => {
   const [restaurantData, setRestaurantData] = useState([]);
 
   useEffect(() => {
-  fetch('/api/v1/restaurants?location=boston')
-  .then(response => {
-    if (response.ok) {
-      return response
-    } else {
-      const errorMessage = `${response.status} (${response.statusText})`;
-      const error = new Error(errorMessage);
-      throw (error);
+    fetch('/api/v1/restaurants?location=boston')
+    .then(response => {
+      if (response.ok) {
+        return response
+      } else {
+        const errorMessage = `${response.status} (${response.statusText})`;
+        const error = new Error(errorMessage);
+        throw (error);
     }
-  })
-  .then(response => response.json())
-  .then(responseBody => {
-    setRestaurantData(responseBody)
-  })
-  .catch(error => console.error(`Error in fetch: ${error.message}`))
+    })
+    .then(response => response.json())
+    .then(responseBody => {
+      setRestaurantData(responseBody)
+    })
+    .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, []);
 
   const restaurantTileArray = restaurantData.map((restaurant) => (
@@ -31,6 +31,8 @@ const RestaurantIndex = () => {
       key={restaurant.id}
     />
   ));
+
+  const restaurantMap = restaurantData.length !== 0 ? <RestaurantMap restaurantsData={restaurantData} /> : null;
 
   return(
     <Fragment>
@@ -58,7 +60,7 @@ const RestaurantIndex = () => {
                 {restaurantTileArray}
             </div>
             <div className="cell medium-6 medium-cell-block-y">
-              {restaurantData.length !== 0 ? <RestaurantMap restaurantsData={restaurantData} /> : null }
+              {restaurantMap}
             </div>
           </div>
         </div>

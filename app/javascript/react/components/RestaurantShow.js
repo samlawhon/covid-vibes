@@ -5,16 +5,10 @@ import ReviewTile from './ReviewTile';
 const RestaurantShow = props => {
   const [restaurant, setRestaurant] = useState({});
   const [getReviewData, setReviewData] = useState([]);
-  const [getNewReview, setNewReview] = useState({
-    masks_customers: false, 
-    masks_employees: false, 
-    social_distancing: false, 
-    party_size: false
-  });
-
+  
   const id = props.match.params.id;
 
-  const handleSubmit = event => { 
+  const handleSubmit = (event, getNewReview) => { 
     
     event.preventDefault();
 
@@ -30,7 +24,7 @@ const RestaurantShow = props => {
         'Accept': 'application/json',
         "Content-Type": "application/json"
       }
-  })
+    })
   .then(response => {
     if (response.ok) {
       return response;
@@ -43,17 +37,6 @@ const RestaurantShow = props => {
   .then(response => response.json())
   .then(body => setReviewData([...getReviewData, body.review]))
   .catch(error => console.error(`Error in fetch: ${error.message}`))
-  }
-
-  const handleInputChange = event => {
-
-    const target = event.currentTarget;
-    const value = target.type === 'checkbox' ? target.checked : Number(target.value);
-
-    setNewReview({
-      ...getNewReview,
-      [event.currentTarget.name]: value
-    });
   }
 
   useEffect(() => {
@@ -91,10 +74,9 @@ const RestaurantShow = props => {
       <h2>{restaurant.name}</h2>
       <p>Cuisine Type: {restaurant.cuisine}</p>
       <ReviewForm 
-      id={id} 
-      handleInputChange={handleInputChange} 
-      handleSubmit={handleSubmit}
-      getNewReview={getNewReview}/>
+        id={id} 
+        handleSubmit={handleSubmit}
+      />
       <ul>
         {Object.keys(restaurant).length !== 0 ? reviewTileArray() : null}
       </ul>

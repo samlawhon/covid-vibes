@@ -1,6 +1,6 @@
 class Api::V1::ReviewsController < ApplicationController
-  protect_from_forgery unless: -> { request.format.json? }
-  before_action :authenticate_user 
+
+  before_action :authenticate_user
 
   def create
     restaurant = Restaurant.find(params[:restaurant_id])
@@ -19,14 +19,6 @@ class Api::V1::ReviewsController < ApplicationController
 
   def review_params
     params.require(:review).permit(:masks_customers, :masks_employees, :party_size, :social_distancing, :rating)
-  end
-
-  protected
-
-  def authenticate_user
-    if !user_signed_in?
-      render json: {error: ["You need to be signed in first"]}
-    end
   end
 
 end
