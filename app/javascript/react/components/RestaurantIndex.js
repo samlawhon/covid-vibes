@@ -2,6 +2,7 @@ import React, { useEffect, useState, Fragment } from "react";
 import RestaurantTile from "./RestaurantTile";
 import RestaurantMap from "./RestaurantsMap";
 import SearchForm from "./SearchForm";
+import covidLogo from "../../../assets/images/CovidVibesLogo2.png"
 
 const RestaurantIndex = () => {
 
@@ -68,7 +69,7 @@ const RestaurantIndex = () => {
     <Fragment>
       <div className="grid-x text-center grid-padding-y">
         <div className="cell small-12">
-          <img src="/assets/CovidVibesLogo2.png"/>
+          <img src={covidLogo}/>
         </div>
       </div>
       <div className="square-box grid-y medium-grid-frame grid-padding-y .grid-margin-y">    
