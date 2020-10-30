@@ -31,7 +31,6 @@ li {
   }
 }
 
-
 @include breakpoint(small only) {
   .square-box {
     max-height: 100%;

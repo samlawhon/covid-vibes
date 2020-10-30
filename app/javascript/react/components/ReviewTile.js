@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 
 const ReviewTile = props => (
-  <Fragment>
+  <div className="callout success">
     <h3>Overall Covid Vibe: {props.rating}</h3>
     <ul>
       <li>Groups are smaller than 10? {props.partySize ? 'yes' : 'no'}</li>
@@ -9,7 +9,7 @@ const ReviewTile = props => (
       <li>Customers are wearing masks? {props.masksCustomers ? 'yes' : 'no'}</li>
       <li>Customers are observing social distancing? {props.socialDistancing ? 'yes' : 'no'}</li>
     </ul>
-  </Fragment>
+  </div>
 );
 
 export default ReviewTile

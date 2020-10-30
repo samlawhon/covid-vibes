@@ -37,7 +37,7 @@ const UserShow = props => {
   });
 
   return (
-    <div>
+    <div className="grid-x grid-padding-x grid-padding-y">
       <UserTile users={users} />
     </div>
   );
