@@ -23,7 +23,7 @@ const ReviewForm = props => {
   return (
     <div className="grid-x">
       <form onSubmit={(event)=> props.handleSubmit(event, getNewReview)}>
-        <h4>What's the vibe?</h4>
+        <h4>What's the Covid vibe?</h4>
         <fieldset class="small-12 columns">
         <ul class="menu vertical">
           <li><input name="masks_employees"
@@ -38,7 +38,7 @@ const ReviewForm = props => {
             type="checkbox"
             checked={getNewReview.masks_customers}
             onChange={handleInputChange}/>
-            <label>Are the customers wearing masks?</label>
+            <label>Are the customers wearing masks? </label>
           </li>
           <li>
             <input
@@ -46,7 +46,7 @@ const ReviewForm = props => {
               type="checkbox"
               checked={getNewReview.social_distancing}
               onChange={handleInputChange}/>
-            <label>Are customers observing social distancing, as in, attempting to stand 6 feet apart from each other?</label>
+            <label>Are customers observing social distancing, as in, attempting to stand 6 feet apart from each other? </label>
           </li>
           <li>
             <input
@@ -54,20 +54,20 @@ const ReviewForm = props => {
               type="checkbox"
               checked={getNewReview.party_size}
               onChange={handleInputChange} />
-            <label>Are groups smaller than 10?</label>
+            <label>Are groups smaller than 10? </label>
           </li>
         </ul>
       </fieldset>
 
         <div className="cell small-12">
           <label>
-            How would you personally rate your Covid safety at this establishment? 
+            Overall Covid Vibe Rating: 
             <select onChange={handleInputChange} name="rating">
               <option value="default">Select From The Following:</option>
-              <option value="1">1 Star - SUSS</option>
+              <option value="1">1 Star... SUSS</option>
               <option value="2">2 Stars</option>
               <option value="3">3 Stars</option>
-              <option value="4">4 Stars!</option>
+              <option value="4">4 Stars</option>
               <option value="5">5 Stars!!!</option>
             </select>
           </label>
