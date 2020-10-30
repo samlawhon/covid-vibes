@@ -28,6 +28,7 @@ RSpec.describe Api::V1::RestaurantsController, type: :controller do
        expect(returned_json["cuisine"]).to eq restaurant_1.cuisine
        expect(returned_json["latitude"]).to eq restaurant_1.latitude
        expect(returned_json["longitude"]).to eq restaurant_1.longitude
+
     end
   end
   
