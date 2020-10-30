@@ -1,10 +1,12 @@
 import React, { useEffect, useState, Fragment } from "react";
 import RestaurantTile from "./RestaurantTile";
 import RestaurantMap from "./RestaurantsMap";
+import SearchForm from "./SearchForm";
 
 const RestaurantIndex = () => {
 
   const [restaurantData, setRestaurantData] = useState([]);
+  const [coords, setCoords] = useState([42.3601, -71.0589]);  // default to Boston's lat, lon
 
   useEffect(() => {
     fetch('/api/v1/restaurants?location=boston')
@@ -19,10 +21,31 @@ const RestaurantIndex = () => {
     })
     .then(response => response.json())
     .then(responseBody => {
-      setRestaurantData(responseBody)
+      setCoords(responseBody.coords);
+      setRestaurantData(responseBody.restaurants);
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
   }, []);
+
+  const handleSubmit = (event, searchBarQuery) => {
+    event.preventDefault(); 
+    fetch(`/api/v1/restaurants?location=${searchBarQuery.trim()}`)
+      .then(response => {
+        if (response.ok) {
+          return response
+        } else {
+          const errorMessage = `${response.status} (${response.statusText})`;
+          const error = new Error(errorMessage);
+          throw (error);
+        }
+      })
+      .then(response => response.json())
+      .then(responseBody => {
+        setCoords(responseBody.coords);
+        setRestaurantData(responseBody.restaurants);
+      })
+      .catch(error => console.error(`Error in fetch: ${error.message}`))
+  }
 
   const restaurantTileArray = restaurantData.map((restaurant) => (
     <RestaurantTile
@@ -32,7 +55,14 @@ const RestaurantIndex = () => {
     />
   ));
 
-  const restaurantMap = restaurantData.length !== 0 ? <RestaurantMap restaurantsData={restaurantData} /> : null;
+  let restaurantMap;
+  if (restaurantData.length !== 0) {
+    restaurantMap = (
+      <RestaurantMap 
+      restaurantsData={restaurantData} 
+      coords={coords}/>
+    );
+  }
 
   return(
     <Fragment>
@@ -41,23 +71,12 @@ const RestaurantIndex = () => {
           <img src="/assets/CovidVibesLogo2.png"/>
         </div>
       </div>
-      <div className="square-box grid-y medium-grid-frame grid-padding-y .grid-margin-y">
-        <form>
-          <div className="grid-x align-right align-bottom grid-padding-x">
-              <div className="medium-7 cell">
-                  <label>Zipcode
-                    <input type="text" placeholder="zipcode" />
-                  </label>
-              </div>
-              <div className="medium-3 cell">
-                <input type="submit" className="button" value="Submit" />
-              </div>
-          </div>
-        </form>
+      <div className="square-box grid-y medium-grid-frame grid-padding-y .grid-margin-y">    
+        <SearchForm handleSubmit={handleSubmit}/>
         <div className="cell medium-auto medium-cell-block-container">
           <div className="grid-x grid-padding-x" >
             <div className="cell medium-6 medium-cell-block-y">
-                {restaurantTileArray}
+              {restaurantTileArray}
             </div>
             <div className="cell medium-6 medium-cell-block-y">
               {restaurantMap}

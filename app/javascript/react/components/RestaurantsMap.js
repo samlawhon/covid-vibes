@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 
 const RestaurantMap = props => {
 
-  const center = [42.3601, -71.0589];  // Boston coordinates, just until search bar up and running
-
   const restaurants = props.restaurantsData.map((restaurant) => (
     <Marker position={[restaurant.latitude, restaurant.longitude]} key={restaurant.id}>
       <Popup>
@@ -17,7 +15,7 @@ const RestaurantMap = props => {
   ));
 
   return (
-    <Map center={center} zoom={14}>
+    <Map center={props.coords} zoom={14}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

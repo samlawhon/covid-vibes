@@ -35,7 +35,7 @@ const RestaurantShow = props => {
     }
   })
   .then(response => response.json())
-  .then(body => setReviewData([...getReviewData, body.review]))
+  .then(body => {setReviewData([...getReviewData, body.review]);})
   .catch(error => console.error(`Error in fetch: ${error.message}`))
   }
 
@@ -52,7 +52,7 @@ const RestaurantShow = props => {
     })
     .then(response => response.json())
     .then(responseBody => {
-      setRestaurant(responseBody);
+      setRestaurant(responseBody);  
       setReviewData(responseBody.reviews);
     })
   .catch(error => console.error(`Error in fetch: ${error.message}`))
@@ -66,8 +66,8 @@ const RestaurantShow = props => {
       masksEmployees={review.masks_employees}
       masksCustomers={review.masks_customers}
       socialDistancing={review.social_distancing}
-    />
-  )); 
+    />)
+  ); 
 
   return (
     <div>
